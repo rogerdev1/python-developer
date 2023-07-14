@@ -8,11 +8,11 @@ conn = sqlite3.connect("DadosUsuarios.db")
 cursor = conn.cursor()
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS Usuários (
-    id INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,
-    Nome TEXT NOT NULL,
-    Email TEXT NOT NULL,
-    Usuário TEX NOT NULL,
-    Senha TEXT NOT NULL
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Nome VARCHAR(100) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Usuário VARCHAR(30) NOT NULL,
+    Senha VARCHAR(32) NOT NULL
     );
 """)
 
